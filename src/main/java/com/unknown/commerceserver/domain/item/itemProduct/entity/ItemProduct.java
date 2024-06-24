@@ -29,5 +29,4 @@ public class ItemProduct extends BaseEntity {
     @Comment("상품 수량")
     @Column(name = "quantity", columnDefinition = "BIGINT")
     private Long quantity;
-
 }

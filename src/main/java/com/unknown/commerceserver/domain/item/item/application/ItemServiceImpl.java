@@ -21,14 +21,14 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<ItemListResponse> getItems() {
-        return itemRepository.findAll().stream()
+        return itemRepository.findAllAndDeletedAtIsNull().stream()
                 .map(ItemListResponse::of)
                 .collect(Collectors.toList());
     }
 
     @Override
     public ItemDetailResponse getItem(Long itemId) {
-        Item item = itemRepository.findById(itemId)
+        Item item = itemRepository.findByIdAndDeletedAtIsNull(itemId)
                 .orElseThrow(() -> new BusinessException(HttpResponse.Fail.NOT_FOUND_ITEM));
         return ItemDetailResponse.of(item);
     }
