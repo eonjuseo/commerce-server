@@ -45,7 +45,7 @@ public class HttpResponse {
         METHOD_NOT_ALLOWED(HttpStatus.METHOD_NOT_ALLOWED, "허용되지 않은 HTTP METHOD 입니다."),
 
         // 409
-        OUT_OF_ITEM_STOCK(HttpStatus.CONFLICT, "해당 상품의 재고가 없습니다."),
+        OUT_OF_ITEM_STOCK(HttpStatus.CONFLICT, "해당 상품의 재고가 부족합니다."),
 
         // 500 서버 에러
         INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "서버 에러 입니다.");
