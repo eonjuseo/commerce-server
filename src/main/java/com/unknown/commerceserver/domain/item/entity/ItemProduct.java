@@ -1,6 +1,5 @@
-package com.unknown.commerceserver.domain.item.itemProduct.entity;
+package com.unknown.commerceserver.domain.item.entity;
 
-import com.unknown.commerceserver.domain.item.item.entity.Item;
 import com.unknown.commerceserver.domain.product.entity.Product;
 import com.unknown.commerceserver.global.common.BaseEntity;
 import jakarta.persistence.*;

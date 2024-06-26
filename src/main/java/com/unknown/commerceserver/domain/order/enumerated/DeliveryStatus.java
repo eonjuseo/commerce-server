@@ -1,4 +1,4 @@
-package com.unknown.commerceserver.domain.order.order.enumerated;
+package com.unknown.commerceserver.domain.order.enumerated;
 
 import lombok.Getter;
 
@@ -11,7 +11,7 @@ public enum DeliveryStatus {
     ON_DELIVERY,
 
     // 배달 완료
-    DELIVERY_COMPLETED,
+    DELIVERED,
 
     // 주문 완료
     ORDER_COMPLETED,

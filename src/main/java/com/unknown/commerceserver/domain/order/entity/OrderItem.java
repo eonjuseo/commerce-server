@@ -1,7 +1,6 @@
-package com.unknown.commerceserver.domain.order.orderitem.entity;
+package com.unknown.commerceserver.domain.order.entity;
 
-import com.unknown.commerceserver.domain.order.order.entity.Order;
-import com.unknown.commerceserver.domain.item.item.entity.Item;
+import com.unknown.commerceserver.domain.item.entity.Item;
 import com.unknown.commerceserver.global.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;

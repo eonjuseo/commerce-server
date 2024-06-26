@@ -1,14 +1,14 @@
 package com.unknown.commerceserver.global.init;
 
-import com.unknown.commerceserver.domain.item.item.dao.ItemRepository;
-import com.unknown.commerceserver.domain.item.item.entity.Item;
-import com.unknown.commerceserver.domain.item.itemProduct.dao.ItemProductRepository;
-import com.unknown.commerceserver.domain.item.itemProduct.entity.ItemProduct;
-import com.unknown.commerceserver.domain.order.order.dao.OrderRepository;
-import com.unknown.commerceserver.domain.order.order.entity.Order;
-import com.unknown.commerceserver.domain.order.order.enumerated.DeliveryStatus;
-import com.unknown.commerceserver.domain.order.orderitem.dao.OrderItemRepository;
-import com.unknown.commerceserver.domain.order.orderitem.entity.OrderItem;
+import com.unknown.commerceserver.domain.item.dao.ItemRepository;
+import com.unknown.commerceserver.domain.item.entity.Item;
+import com.unknown.commerceserver.domain.item.dao.ItemProductRepository;
+import com.unknown.commerceserver.domain.item.entity.ItemProduct;
+import com.unknown.commerceserver.domain.order.dao.OrderRepository;
+import com.unknown.commerceserver.domain.order.entity.Order;
+import com.unknown.commerceserver.domain.order.enumerated.DeliveryStatus;
+import com.unknown.commerceserver.domain.order.dao.OrderItemRepository;
+import com.unknown.commerceserver.domain.order.entity.OrderItem;
 import com.unknown.commerceserver.domain.product.dao.ProductRepository;
 import com.unknown.commerceserver.domain.product.entity.Product;
 import lombok.RequiredArgsConstructor;

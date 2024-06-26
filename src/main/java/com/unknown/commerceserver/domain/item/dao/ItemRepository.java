@@ -1,6 +1,6 @@
-package com.unknown.commerceserver.domain.item.item.dao;
+package com.unknown.commerceserver.domain.item.dao;
 
-import com.unknown.commerceserver.domain.item.item.entity.Item;
+import com.unknown.commerceserver.domain.item.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

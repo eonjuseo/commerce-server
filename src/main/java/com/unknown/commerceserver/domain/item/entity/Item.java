@@ -1,4 +1,4 @@
-package com.unknown.commerceserver.domain.item.item.entity;
+package com.unknown.commerceserver.domain.item.entity;
 
 import com.unknown.commerceserver.global.common.BaseEntity;
 import jakarta.persistence.Column;

@@ -1,6 +1,6 @@
-package com.unknown.commerceserver.domain.item.item.dto;
+package com.unknown.commerceserver.domain.item.dto;
 
-import com.unknown.commerceserver.domain.item.item.entity.Item;
+import com.unknown.commerceserver.domain.item.entity.Item;
 import lombok.Builder;
 import lombok.Getter;
 

@@ -1,9 +1,9 @@
-package com.unknown.commerceserver.domain.item.item.application;
+package com.unknown.commerceserver.domain.item.application;
 
-import com.unknown.commerceserver.domain.item.item.dao.ItemRepository;
-import com.unknown.commerceserver.domain.item.item.dto.ItemDetailResponse;
-import com.unknown.commerceserver.domain.item.item.dto.ItemListResponse;
-import com.unknown.commerceserver.domain.item.item.entity.Item;
+import com.unknown.commerceserver.domain.item.dao.ItemRepository;
+import com.unknown.commerceserver.domain.item.dto.ItemDetailResponse;
+import com.unknown.commerceserver.domain.item.dto.ItemListResponse;
+import com.unknown.commerceserver.domain.item.entity.Item;
 import com.unknown.commerceserver.global.exception.BusinessException;
 import com.unknown.commerceserver.global.response.HttpResponse;
 import lombok.RequiredArgsConstructor;

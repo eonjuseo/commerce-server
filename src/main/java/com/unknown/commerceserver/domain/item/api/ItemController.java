@@ -1,8 +1,8 @@
-package com.unknown.commerceserver.domain.item.item.api;
+package com.unknown.commerceserver.domain.item.api;
 
-import com.unknown.commerceserver.domain.item.item.application.ItemService;
-import com.unknown.commerceserver.domain.item.item.dto.ItemDetailResponse;
-import com.unknown.commerceserver.domain.item.item.dto.ItemListResponse;
+import com.unknown.commerceserver.domain.item.dto.ItemDetailResponse;
+import com.unknown.commerceserver.domain.item.dto.ItemListResponse;
+import com.unknown.commerceserver.domain.item.application.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
