@@ -26,7 +26,7 @@ public class ItemController {
 
     @GetMapping("{itemId}")
     public ResponseEntity<ItemDetailResponse> getItem(@PathVariable Long itemId) {
-        ItemDetailResponse item = itemService.getItem(itemId);
-        return ResponseEntity.ok().body(item);
+        ItemDetailResponse itemDetailResponse = itemService.getItem(itemId);
+        return ResponseEntity.ok().body(itemDetailResponse);
     }
 }

@@ -19,12 +19,12 @@ public class ItemCustomRepositoryImpl implements ItemCustomRepository {
 
         where.and(item.deletedAt.isNull());
 
-        List<Item> items = jpaQueryFactory
+        List<Item> itemList = jpaQueryFactory
                 .select(item)
                 .from(item)
                 .where(where)
                 .fetch();
 
-        return items;
+        return itemList;
     }
 }
