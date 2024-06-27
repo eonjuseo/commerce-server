@@ -29,7 +29,7 @@ public class HttpResponse {
     public enum Fail {
         // 400
         BAD_REQUEST(HttpStatus.BAD_REQUEST, "잘못된 요청 입니다."),
-
+        PRICE_MISMATCH(HttpStatus.BAD_REQUEST, "상품 가격 오류 입니다."),
         // 403
         FORBIDDEN(HttpStatus.FORBIDDEN, "권한이 없는 접근입니다."),
 

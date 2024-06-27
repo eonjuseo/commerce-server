@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @Getter
 @Builder
 public class OrderItemResponse {
-    private Long id;
+    private Long orderItemId;
     private Long itemId;
     private Long quantity;
     private BigDecimal itemPrice;
@@ -17,7 +17,7 @@ public class OrderItemResponse {
 
     public static OrderItemResponse of (OrderItem orderItem) {
         return OrderItemResponse.builder()
-                .id(orderItem.getId())
+                .orderItemId(orderItem.getId())
                 .itemId(orderItem.getItem().getId())
                 .quantity(orderItem.getQuantity())
                 .itemPrice(orderItem.getItemPrice())

@@ -84,8 +84,8 @@ public class NotProd {
     }
 
     private void initOrder() {
-        orderRepository.save(Order.builder().totalPrice(BigDecimal.valueOf(29000)).address("Seoul, Korea").contact(821012345678L).status(DeliveryStatus.ON_DELIVERY).build());
-        orderRepository.save(Order.builder().totalPrice(BigDecimal.valueOf(41000)).address("Busan, Korea").contact(821098765432L).status(DeliveryStatus.DELIVERED).build());
+        orderRepository.save(Order.builder().totalPrice(BigDecimal.valueOf(9000)).address("Seoul, Korea").contact(821012345678L).status(DeliveryStatus.ON_DELIVERY).build());
+        orderRepository.save(Order.builder().totalPrice(BigDecimal.valueOf(32000)).address("Busan, Korea").contact(821098765432L).status(DeliveryStatus.DELIVERED).build());
         orderRepository.save(Order.builder().totalPrice(BigDecimal.valueOf(19000)).address("Incheon, Korea").contact(821011122233L).status(DeliveryStatus.ON_DELIVERY).build());
         orderRepository.save(Order.builder().totalPrice(BigDecimal.valueOf(10000000)).address("Daegu, Korea").contact(821022334455L).status(DeliveryStatus.DELIVERED).build());
         orderRepository.save(Order.builder().totalPrice(BigDecimal.valueOf(28000)).address("Daejeon, Korea").contact(821033445566L).status(DeliveryStatus.ACCEPTED).build());
@@ -99,10 +99,10 @@ public class NotProd {
         orderItemRepository.save(OrderItem.builder().order(orders.get(0)).item(items.get(2)).quantity(1L).itemName(items.get(2).getName()).itemPrice(items.get(2).getItemPrice()).build());
         orderItemRepository.save(OrderItem.builder().order(orders.get(1)).item(items.get(3)).quantity(1L).itemName(items.get(3).getName()).itemPrice(items.get(3).getItemPrice()).build());
         orderItemRepository.save(OrderItem.builder().order(orders.get(1)).item(items.get(4)).quantity(1L).itemName(items.get(4).getName()).itemPrice(items.get(4).getItemPrice()).build());
-        orderItemRepository.save(OrderItem.builder().order(orders.get(2)).item(items.get(0)).quantity(1L).itemName(items.get(0).getName()).itemPrice(items.get(0).getItemPrice()).build());
+        orderItemRepository.save(OrderItem.builder().order(orders.get(2)).item(items.get(0)).quantity(2L).itemName(items.get(0).getName()).itemPrice(items.get(0).getItemPrice()).build());
         orderItemRepository.save(OrderItem.builder().order(orders.get(2)).item(items.get(1)).quantity(1L).itemName(items.get(1).getName()).itemPrice(items.get(1).getItemPrice()).build());
         orderItemRepository.save(OrderItem.builder().order(orders.get(3)).item(items.get(5)).quantity(1L).itemName(items.get(5).getName()).itemPrice(items.get(5).getItemPrice()).build());
-        orderItemRepository.save(OrderItem.builder().order(orders.get(4)).item(items.get(2)).quantity(1L).itemName(items.get(2).getName()).itemPrice(items.get(2).getItemPrice()).build());
+        orderItemRepository.save(OrderItem.builder().order(orders.get(4)).item(items.get(2)).quantity(3L).itemName(items.get(2).getName()).itemPrice(items.get(2).getItemPrice()).build());
         orderItemRepository.save(OrderItem.builder().order(orders.get(4)).item(items.get(3)).quantity(1L).itemName(items.get(3).getName()).itemPrice(items.get(3).getItemPrice()).build());
     }
 }
