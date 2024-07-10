@@ -33,4 +33,12 @@ public class Order extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", columnDefinition = "VARCHAR(20)")
     private DeliveryStatus status;
+
+    public void saveTotalPrice(BigDecimal totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public void acceptOrder() {
+        this.status = DeliveryStatus.ACCEPTED;
+    }
 }

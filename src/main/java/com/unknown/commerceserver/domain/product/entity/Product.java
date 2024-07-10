@@ -10,7 +10,6 @@ import org.hibernate.annotations.Comment;
 import java.math.BigDecimal;
 
 @Getter
-@Setter
 @SuperBuilder(toBuilder = true)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
@@ -27,4 +26,8 @@ public class Product extends BaseEntity {
     @Comment("제품 재고")
     @Column(name = "stock", columnDefinition = "BIGINT")
     private Long stock;
+
+    public void decreaseStock(Long quantity) {
+        this.stock -= quantity;
+    }
 }

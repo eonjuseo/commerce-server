@@ -13,7 +13,6 @@ import com.unknown.commerceserver.domain.order.dto.response.OrderListResponse;
 import com.unknown.commerceserver.domain.order.dto.response.OrderResponse;
 import com.unknown.commerceserver.domain.order.entity.Order;
 import com.unknown.commerceserver.domain.order.entity.OrderItem;
-import com.unknown.commerceserver.domain.order.enumerated.DeliveryStatus;
 import com.unknown.commerceserver.domain.product.dao.ProductRepository;
 import com.unknown.commerceserver.domain.product.entity.Product;
 import com.unknown.commerceserver.global.exception.BusinessException;
@@ -66,7 +65,7 @@ public class OrderServiceImpl implements OrderService {
                 }
 
                 // 필요한 수량만큼 재고 감소시키고 저장
-                product.setStock(product.getStock() - requiredQuantity);
+                product.decreaseStock(requiredQuantity);
                 productRepository.save(product);
             }
 
@@ -84,11 +83,11 @@ public class OrderServiceImpl implements OrderService {
 
         // 총 금액 계산
         BigDecimal totalPrice = getTotalPrice(orderItemList);
-        order.setTotalPrice(totalPrice);
+        order.saveTotalPrice(totalPrice);
         orderRepository.save(order);
 
         // 주문 상태 변경
-        order.setStatus(DeliveryStatus.ACCEPTED);
+        order.acceptOrder();
 
         // 주문 응답 생성
         List<OrderItemResponse> orderItemResponses = createOrderItemResponses(orderItemList);
