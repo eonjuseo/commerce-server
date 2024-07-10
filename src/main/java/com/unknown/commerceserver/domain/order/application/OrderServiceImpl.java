@@ -67,12 +67,6 @@ public class OrderServiceImpl implements OrderService {
                     throw new BusinessException(HttpResponse.Fail.OUT_OF_ITEM_STOCK);
                 }
 
-//                // (product)제품가 * (itemProduct)수량 = (item)상품가와 일치하는지 검증
-//                BigDecimal itemCost = product.getProductPrice().multiply(BigDecimal.valueOf(itemProduct.getQuantity()));
-//                if (itemCost.compareTo(item.getItemPrice()) != 0) {
-//                    throw new BusinessException(HttpResponse.Fail.PRICE_MISMATCH);
-//                }
-
                 // 필요한 수량만큼 재고 감소시키고 저장
                 product.setStock(product.getStock() - requiredQuantity);
                 productRepository.save(product);
@@ -104,8 +98,7 @@ public class OrderServiceImpl implements OrderService {
         return OrderResponse.of(order, orderItemResponses, totalPrice);
     }
 
-    @Override
-    public BigDecimal getTotalPrice(List<OrderItem> orderItemList) {
+   private BigDecimal getTotalPrice(List<OrderItem> orderItemList) {
         BigDecimal totalPrice = BigDecimal.ZERO;
         for (OrderItem orderItem : orderItemList) {
             BigDecimal total = orderItem.getItemPrice().multiply(BigDecimal.valueOf(orderItem.getQuantity()));
@@ -116,8 +109,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     // 주문 항목 응답 객체들을 생성하여 리스트로 반환
-    @Override
-    public List<OrderItemResponse> createOrderItemResponses(List<OrderItem> orderItemList) {
+   private List<OrderItemResponse> createOrderItemResponses(List<OrderItem> orderItemList) {
         List<OrderItemResponse> orderItemResponses = new ArrayList<>();
         for (OrderItem orderItem : orderItemList) {
             OrderItemResponse orderItemResponse = OrderItemResponse.of(orderItem);

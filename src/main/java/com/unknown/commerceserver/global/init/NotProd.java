@@ -54,9 +54,9 @@ public class NotProd {
     }
 
     private void initProduct() {
-        productRepository.save(Product.builder().name("열라면").productPrice(BigDecimal.valueOf(1000)).stock(100L).build());
-        productRepository.save(Product.builder().name("칸쵸").productPrice(BigDecimal.valueOf(1000)).stock(200L).build());
+        productRepository.save(Product.builder().name("열라면").productPrice(BigDecimal.valueOf(1000)).stock(20L).build());
         productRepository.save(Product.builder().name("아이시스").productPrice(BigDecimal.valueOf(1500)).stock(50L).build());
+        productRepository.save(Product.builder().name("칸쵸").productPrice(BigDecimal.valueOf(1000)).stock(200L).build());
         productRepository.save(Product.builder().name("김치볶음밥").productPrice(BigDecimal.valueOf(2000)).stock(100L).build());
         productRepository.save(Product.builder().name("잡채볶음밥").productPrice(BigDecimal.valueOf(2000)).stock(100L).build());
         productRepository.save(Product.builder().name("아이폰 16").productPrice(BigDecimal.valueOf(1000000)).stock(0L).build());
