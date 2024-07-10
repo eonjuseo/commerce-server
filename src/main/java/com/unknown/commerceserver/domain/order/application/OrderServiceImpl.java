@@ -58,9 +58,7 @@ public class OrderServiceImpl implements OrderService {
             // 상품에 연결된 제품 목록 가져옴
             List<ItemProduct> itemProducts = itemProductRepository.findByItemId(item.getId());
             for (ItemProduct itemProduct : itemProducts) {
-                Product product = productRepository.findById(itemProduct.getProduct().getId())
-                        .orElseThrow(() -> new BusinessException(HttpResponse.Fail.NOT_FOUND_PRODUCT));
-
+                Product product = productRepository.findProductWithLock(itemProduct.getProduct().getId());
                 // 필요한 수량만큼 제품의 재고가 있는지 확인
                 Long requiredQuantity = itemProduct.getQuantity() * orderItemRequest.getQuantity();
                 if (product.getStock() < requiredQuantity) { // 재고 < 필요수량
